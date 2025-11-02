@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500"
+      rel="stylesheet"
+    />
+    <title>Calculadora TG</title>
+  </head>
+  <body>
+    <header>
+      <h1>Calculadora TG</h1>
+    </header>
+    <main>
+      <div id="container-precos">
+        <div class="div-precos">
+          <p>Folhetos A6 120g - 00,07</p>
+          <p>Glossy Apenas Frente - 00,60</p>
+          <p>Glossy Frente e Verso - 00,90</p>
+          <p>Etiquetas Frente e Verso - 00,70</p>
+        </div>
+        <div class="div-precos">
+          <p>Adesivo Glossy 90g - 00,60</p>
+          <p>Offset 240g Apenas Frente - 00,45</p>
+          <p>Offset 240g Frente e Verso - 00,65</p>
+          <p>Offset 180g Apenas Frente - 00,30</p>
+        </div>
+      </div>
+
+        <div id="select-box">
+          <div id="empresa">
+            <label for="select-empresa">Selecione a empresa:</label>
+            <select id="select-empresa">
+              <option value="mei">MEI</option>
+              <option value="micro-empresa">Micro Empresa</option>
+            </select>
+          </div>
+
+          <div id="trabalhos">
+          <label for="select-options">Selecione o tipo de trabalho:</label>
+          <select id="select-options">
+            <option disabled selected>Tipo de Trabalho</option>
+            <option value="adesivos">Adesivos</option>
+            <option value="etiquetas">Etiquetas</option>
+            <option value="cartao-personalizado">Cartão Personalizado</option>
+            <option value="cartao-visita">Cartão de Visita 54x90mm</option>
+            <option value="cartao-offset180g">Cartão Offset 180g</option>
+            <option value="folhetos">Folhetos</option>
+          </select>
+          </div>
+        </div>
+
+        <div id="select-box-multiplicador">
+          <label for="select-options">Selecione o multiplicador:</label>
+          <select id="select-options-multiplicador">
+            <option value="2.5" >x2.5 (Pedido Grande)</option>
+            <option value="2.75" selected>x2.75 (Padrao)</option>
+            <option value="3">x3 (Alta Demanda)</option>
+          </select>
+        </div>
+
+        <div id="container-inputs">
+          <div class="div-input">
+            <label for="custo-folha">Custo por folha:</label>
+            <input type="number" id="custo-folha" placeholder="Exemplo: 0.50" />
+          </div>
+          <div class="div-input">
+            <label for="quant-folhas">Quantidade de folhas:</label>
+            <input type="number" id="quant-folhas" placeholder="Exemplo: 10" />
+          </div>
+
+          <button onclick="calcular()">Calcular</button>
+        </div>
+        <div class="output-preco">
+          <h2 id="valor-de-direta">
+            Venda Direta: R$<span id="venda-direta">0,00</span>
+          </h2>
+        </div>
+        <div class="output-preco">
+          <h2 id="valor-de-shopee">
+            Venda Shopee: R$<span id="venda-shopee">0,00</span>
+          </h2>
+        </div>
+      </div>
+    </main>
+    <footer>
+      <h3>
+        Copyright &copy; TG Gráfica Personalizada - 2025 | Todos os direitos são
+        reservados.
+      </h3>
+    </footer>
+
+    <script src="script.js" defer></script>
+  </body>
+</html>
