@@ -1,7 +1,7 @@
 function calcular() {
   const tipoTrabalho = document.getElementById("select-options").value;
   const tipoEmpresa = document.getElementById("select-empresa").value;
-  const custoFolha = Number(document.getElementById("custo-folha").value);
+  const custoFolha = Number(document.getElementById("select-precos").value);
   const quantFolha = Number(document.getElementById("quant-folhas").value);
   const multiplicador = Number(
     document.getElementById("select-options-multiplicador").value
@@ -10,7 +10,7 @@ function calcular() {
   const vendaDireta = document.getElementById("venda-direta");
   const vendaShopee = document.getElementById("venda-shopee");
 
-  const TAXA_CONTABILIDADE = 2;
+  const TAXA_CONTABILIDADE = 1.05;
   let calculoDireta = 0;
   let calculoShopee = 0;
 
@@ -23,8 +23,8 @@ function calcular() {
     }
 
     if (tipoEmpresa === "micro-empresa") {
-      calculoDireta = (base + TAXA_CONTABILIDADE + 2) * 1.15; // Loja: +2,00 +15%
-      calculoShopee = (base + TAXA_CONTABILIDADE + 4) * 1.25; // Shopee: +4,00 +25%
+      calculoDireta = (base * TAXA_CONTABILIDADE + 2) * 1.15; // Loja: +2,00 +15%
+      calculoShopee = (base * TAXA_CONTABILIDADE + 4) * 1.25; // Shopee: +4,00 +25%
     } else if (tipoEmpresa === "mei") {
       calculoDireta = (base + 2) * 1.15; // Loja: +2,00 +15%
       calculoShopee = (base + 4) * 1.25; // Shopee: +4,00 +25%

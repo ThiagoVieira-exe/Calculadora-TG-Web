@@ -12,7 +12,7 @@ body {
   justify-content: space-between;
   min-height: 100vh; /* Garante que o body ocupe toda a altura da tela */
   margin: 0;
-  min-width: 325px;
+  min-width: 420px;
   align-items: center;
   font-family: "Poppins", serif;
   font-size: 25px;
@@ -43,7 +43,9 @@ main {
 }
 
 /* Containers principais */
-#container,
+
+#container-precos,
+#select-box-precos,
 #select-box,
 #trabalhos,
 #empresa,
@@ -54,12 +56,14 @@ main {
   flex-direction: column;
   align-items: center;
   justify-content: flex-start;
-  margin: 0.5rem auto;
+  margin: 0.2rem auto;
+  padding: 0 15px;
 }
 
 #container-precos {
   display: flex;
-  gap: 15px;
+  flex-direction: column;
+  gap: 10px;
   line-height: 1.5;
   align-items: center;
   justify-content: center;
@@ -79,21 +83,24 @@ main {
     flex-wrap: wrap;
   }
 }
-  
+
 .div-precos p {
   font-size: 15px;
   font-weight: 500;
-  margin: 5px 0; /* Espaçamento entre os parágrafos */
+  margin: 3px 0; /* Espaçamento entre os parágrafos */
 }
 
 /* Estilos do select */
 #select-box label,
-.div-input label {
+.div-input label,
+label {
   font-family: "Poppins", serif;
   font-weight: 500;
 }
 
-#select-box #select-options, #select-empresa,
+#select-box #select-options,
+#select-empresa,
+#select-precos,
 #select-options-multiplicador {
   border-radius: 10px;
   height: 30px;
@@ -133,7 +140,7 @@ button:hover {
 
 /* Output do preço */
 .output-preco {
-  margin: 15px 0 8px;
+  margin: 0 0 3px 0;
 }
 
 .output-preco h2 {

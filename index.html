@@ -19,57 +19,53 @@
     </header>
     <main>
       <div id="container-precos">
-        <div class="div-precos">
-          <p>Folhetos A6 120g - 00,07</p>
-          <p>Glossy Apenas Frente - 00,60</p>
-          <p>Glossy Frente e Verso - 00,90</p>
-          <p>Etiquetas Frente e Verso - 00,70</p>
+        <div id="empresa">
+          <label for="select-empresa">Empresa:</label>
+          <select id="select-empresa">
+            <option value="mei">MEI</option>
+            <option value="micro-empresa">Micro Empresa</option>
+          </select>
         </div>
-        <div class="div-precos">
-          <p>Adesivo Glossy 90g - 00,60</p>
-          <p>Offset 240g Apenas Frente - 00,45</p>
-          <p>Offset 240g Frente e Verso - 00,65</p>
-          <p>Offset 180g Apenas Frente - 00,30</p>
-        </div>
-      </div>
 
         <div id="select-box">
-          <div id="empresa">
-            <label for="select-empresa">Selecione a empresa:</label>
-            <select id="select-empresa">
-              <option value="mei">MEI</option>
-              <option value="micro-empresa">Micro Empresa</option>
-            </select>
-          </div>
-
           <div id="trabalhos">
-          <label for="select-options">Selecione o tipo de trabalho:</label>
-          <select id="select-options">
-            <option disabled selected>Tipo de Trabalho</option>
-            <option value="adesivos">Adesivos</option>
-            <option value="etiquetas">Etiquetas</option>
-            <option value="cartao-personalizado">Cartão Personalizado</option>
-            <option value="cartao-visita">Cartão de Visita 54x90mm</option>
-            <option value="cartao-offset180g">Cartão Offset 180g</option>
-            <option value="folhetos">Folhetos</option>
-          </select>
+            <label for="select-options">Tipo de trabalho:</label>
+            <select id="select-options">
+              <option disabled selected>Tipo de Trabalho</option>
+              <option value="adesivos">Adesivos</option>
+              <option value="etiquetas">Etiquetas</option>
+              <option value="cartao-personalizado">Cartão Personalizado</option>
+              <option value="cartao-visita">Cartão de Visita 54x90mm</option>
+              <option value="cartao-offset180g">Cartão Offset 180g</option>
+              <option value="folhetos">Folhetos</option>
+            </select>
           </div>
         </div>
 
         <div id="select-box-multiplicador">
-          <label for="select-options">Selecione o multiplicador:</label>
+          <label for="select-options">Multiplicador:</label>
           <select id="select-options-multiplicador">
-            <option value="2.5" >x2.5 (Pedido Grande)</option>
-            <option value="2.75" selected>x2.75 (Padrao)</option>
-            <option value="3">x3 (Alta Demanda)</option>
+            <option value="2.5">x2.5 (Pedido Grande)</option>
+            <option value="2.75">x2.75 (Com Desconto)</option>
+            <option value="3" selected>x3 (Padrao)</option>
+          </select>
+        </div>
+
+        <div id="select-box-precos">
+          <label for="select-precos">Tipo de impressão:</label>
+          <select id="select-precos">
+            <option value="0.55">ADESIVO GLOSSY 90G</option>
+            <option value="0.55">GLOSSY - APENAS FRENTE</option>
+            <option value="0.85">GLOSSY - FRENTE E VERSO</option>
+            <option value="0.65">ETIQUETAS - FRENTE E VERSO</option>
+            <option value="0.28">OFFSET 180G - APENAS FRENTE</option>
+            <option value="0.45">OFFSET 240G - APENAS FRENTE</option>
+            <option value="0.65">OFFSET 240G - FRENTE E VERSO</option>
+            <option value="0.07">FOLHETOS A6 120G - APENAS FRENTE</option>
           </select>
         </div>
 
         <div id="container-inputs">
-          <div class="div-input">
-            <label for="custo-folha">Custo por folha:</label>
-            <input type="number" id="custo-folha" placeholder="Exemplo: 0.50" />
-          </div>
           <div class="div-input">
             <label for="quant-folhas">Quantidade de folhas:</label>
             <input type="number" id="quant-folhas" placeholder="Exemplo: 10" />
