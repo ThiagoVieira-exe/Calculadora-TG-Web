@@ -39,7 +39,7 @@ main {
   flex-direction: column;
   align-items: center;
   justify-content: flex-start;
-  margin: 0.5rem auto;
+  margin: 0 auto 0.5rem;
 }
 
 /* Containers principais */
@@ -56,7 +56,7 @@ main {
   flex-direction: column;
   align-items: center;
   justify-content: flex-start;
-  margin: 0.2rem auto;
+  margin: 0 auto 0.2rem;
   padding: 0 15px;
 }
 
@@ -119,6 +119,36 @@ label {
   height: 28px;
   width: 130px;
   border: 1px solid #000;
+}
+
+#laminacao {
+  text-align: center;
+}
+
+#laminacao p {
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 5px;
+}
+
+.laminacao-group {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+  align-items: center;
+}
+
+.laminacao-group label {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  cursor: pointer;
+  font-size: 15px;
+}
+
+.laminacao-group input[type="checkbox"] {
+  accent-color: #797979;
+  transform: scale(1.1);
 }
 
 /* Botões */

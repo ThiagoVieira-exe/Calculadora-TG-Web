@@ -13,9 +13,16 @@ function calcular() {
   const TAXA_CONTABILIDADE = 1.05;
   let calculoDireta = 0;
   let calculoShopee = 0;
+  let custoLaminacao = 0;
 
   function atribuirPrecos(extra) {
-    let custoBase = custoFolha * quantFolha + extra;
+    if (document.getElementById("frente").checked) {
+      custoLaminacao = 0.15;
+    } else if (document.getElementById("frente-verso").checked) {
+      custoLaminacao = 0.3;
+    }
+
+    let custoBase = (custoFolha + custoLaminacao) * quantFolha + extra;
     let base = custoBase * multiplicador;
 
     if (quantFolha >= 15 && tipoTrabalho !== "folhetos") {
