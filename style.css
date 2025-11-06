@@ -161,6 +161,11 @@ label {
   transform: scale(1.1);
 }
 
+select option {
+  text-align: center;
+  background-color: #f0f0f0;
+}
+
 /* Botões */
 button {
   border: none;
