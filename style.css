@@ -7,6 +7,7 @@
 
 /* Estilos gerais */
 body {
+  height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -16,7 +17,7 @@ body {
   align-items: center;
   font-family: "Poppins", serif;
   font-size: 25px;
-  background-color: #e6e6e6;
+  background-color: #f0f0f0;
   line-height: 1.5; /* Ajuste para espaçamento entre linhas */
 }
 
@@ -26,10 +27,13 @@ header {
   display: flex;
   justify-content: center;
   align-items: center;
+  background-color: #1a9fcb;
+  width: 100vw;
 }
 
 header h1 {
   text-align: center;
+  color: #f0f0f0;
 }
 
 /* Main */
@@ -38,7 +42,7 @@ main {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: flex-start;
+  justify-content: center;
   margin: 0 10px;
 }
 
@@ -72,6 +76,7 @@ main {
   border-radius: 15px;
   flex-wrap: wrap;
   margin: 20px 0; /* Espaçamento ao redor do container */
+  background-color: #b8d9e4;
 }
 
 .div-precos p {
@@ -185,16 +190,17 @@ button:hover {
 
 /* Footer */
 footer {
-  width: 100%; /* Garante que o footer ocupe toda a largura */
+  width: 100vw; /* Garante que o footer ocupe toda a largura */
   height: auto; /* Ajusta a altura automaticamente */
   margin-top: auto; /* Empurra o footer para o final da página */
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #e6e6e6; /* Opcional: cor de fundo para destacar o footer */
+  background-color: #1a9fcb; /* Opcional: cor de fundo para destacar o footer */
 }
 
 footer h3 {
+  color: #f0f0f0;
   font-size: 13px;
   font-weight: 300;
   word-wrap: break-word;
