@@ -20,7 +20,7 @@
     <main>
       <div id="container-principal">
         <div id="trabalhos">
-          <label for="select-options">Tipo de trabalho:</label>
+          <label for="select-options">Tipo de Trabalho:</label>
           <select id="select-options">
             <option disabled selected>Tipo de Trabalho</option>
             <option value="adesivos">Adesivos</option>
@@ -42,7 +42,7 @@
         </div>
 
         <div id="select-box-precos">
-          <label for="select-precos">Tipo de impressão:</label>
+          <label for="select-precos">Tipo de Impressão:</label>
           <select id="select-precos">
             <option value="0.55">ADESIVO GLOSSY 90G</option>
             <option value="0.55">GLOSSY - APENAS FRENTE</option>
@@ -59,31 +59,41 @@
           <label for="select-laminacao">Laminação:</label>
           <select id="select-laminacao">
             <option value="0" selected>Nenhuma</option>
-            <option value="0.15">Comum - Apenas Frente</option>
-            <option value="0.30">Comum - Frente e Verso</option>
+            <option value="0.15">Brilho - Apenas Frente</option>
+            <option value="0.30">Brilho - Frente e Verso</option>
             <option value="0.35">Holográfico - Apenas Frente</option>
             <option value="0.70">Holográfico - Frente e Verso</option>
           </select>
         </div>
 
         <div id="container-inputs">
-          <div class="div-input">
-            <label for="quant-folhas">Numero de folhas?</label>
-            <input type="number" id="quant-folhas" placeholder="Exemplo: 10" />
+          <div class="input-row">
+            <div class="div-input">
+              <label for="quant-folhas">Quant. Folhas:</label>
+              <input
+                type="number"
+                id="quant-folhas"
+                placeholder="Exemplo: 10"
+              />
+            </div>
+            <div class="div-input">
+              <label for="custo-adicional">Valor Adicional:</label>
+              <input
+                type="number"
+                id="custo-adicional"
+                placeholder="Exemplo: 5"
+              />
+            </div>
           </div>
           <button onclick="calcular()">Calcular</button>
         </div>
 
         <div id="container-precos">
           <div class="output-preco">
-            <h2 id="valor-de-direta">
-              Venda Direta: R$<span id="venda-direta">0,00</span>
-            </h2>
+            <h2>Venda Direta: R$<span id="venda-direta">0,00</span></h2>
           </div>
           <div class="output-preco">
-            <h2 id="valor-de-shopee">
-              Venda Shopee: R$<span id="venda-shopee">0,00</span>
-            </h2>
+            <h2>Venda Shopee: R$<span id="venda-shopee">0,00</span></h2>
           </div>
         </div>
       </div>
