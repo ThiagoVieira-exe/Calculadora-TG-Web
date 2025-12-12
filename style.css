@@ -64,7 +64,7 @@ main {
   padding: 0 15px;
 }
 
-#container-precos {
+#container-principal {
   display: flex;
   flex-direction: row;
   gap: 10px;
@@ -93,10 +93,10 @@ label {
   font-weight: 500;
 }
 
-#select-box #select-options,
-#select-empresa,
+#select-options,
 #select-precos,
-#select-options-multiplicador {
+#select-options-multiplicador,
+#select-laminacao {
   border-radius: 10px;
   height: 30px;
   width: 200px;
@@ -117,48 +117,17 @@ label {
 }
 
 #laminacao {
-  text-align: center;
-}
-
-#laminacao p {
-  font-size: 16px;
-  font-weight: 600;
-  margin-bottom: 5px;
-}
-
-.laminacao-group {
   display: flex;
-  gap: 15px;
+  flex-direction: column;
+  align-items: center;
   justify-content: center;
-  align-items: center;
+  margin: 0 auto 0.2rem;
+  padding: 0 15px;
 }
 
-@media (min-width: 480px) {
-  #laminacao {
-    padding: 0 0 0 50px;
-  }
-
-  #container-inputs {
-    padding: 0 0 0 50px;
-  }
-
-  .laminacao-group {
-    flex-direction: column;
-    gap: 10px;
-  }
-}
-
-.laminacao-group label {
-  display: flex;
-  align-items: center;
-  gap: 4px;
-  cursor: pointer;
-  font-size: 15px;
-}
-
-.laminacao-group input[type="checkbox"] {
-  accent-color: #797979;
-  transform: scale(1.1);
+/* Estilo para deixar o título da laminação em negrito de forma consistente */
+#laminacao label {
+  font-weight: 500; /* ou 'bold' se preferir mais forte */
 }
 
 select option {
