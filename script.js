@@ -32,8 +32,8 @@ function calcular() {
   let custoBase = (custoFolha + custoLaminacao) * quantFolha + extra;
   let base = custoBase * multiplicador;
 
-  const calculoDireta = (base + 2 + custoAdicional) * 1.15; // Loja: +2,00 + 15%
-  const calculoShopee = (base + 4 + custoAdicional) * 1.25; // Shopee: +4,00 + 25%
+  const calculoDireta = (base + 3 + custoAdicional) * 1.15; // Loja: +3,00 + 15%
+  const calculoShopee = (base + 5 + custoAdicional) * 1.25; // Shopee: +5,00 + 25%
 
   vendaDireta.innerHTML = Math.round(calculoDireta).toString() + ",00";
   vendaShopee.innerHTML = Math.round(calculoShopee).toString() + ",00";
