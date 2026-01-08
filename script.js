@@ -33,7 +33,7 @@ function calcular() {
 
   let base = custoBase * multiplicador;
 
-  if (quantFolha >= 15) {
+  if (quantFolha >= 15 && tipoTrabalho != "folhetos") {
     base += quantFolha / 5;
   }
 
