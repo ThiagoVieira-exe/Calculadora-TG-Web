@@ -14,6 +14,7 @@ function calcular() {
     Number(document.getElementById("custo-adicional").value) || 0;
 
   let extra = 0;
+  const TAXA_CONTABILIDADE = 2.5
 
   if (
     tipoTrabalho === "etiquetas" ||
@@ -37,8 +38,8 @@ function calcular() {
     base += quantFolha / 5;
   }
 
-  const calculoDireta = (base + 2 + custoAdicional) * 1.15; // Loja: +2,00 + 15%
-  const calculoShopee = (base + 4 + custoAdicional) * 1.25; // Shopee: +4,00 + 25%
+  const calculoDireta = (base + 2 + custoAdicional + TAXA_CONTABILIDADE) * 1.15; // Loja: +2,00 + 15%
+  const calculoShopee = (base + 4 + custoAdicional + TAXA_CONTABILIDADE) * 1.25; // Shopee: +4,00 + 25%
 
   vendaDireta.innerHTML = Math.round(calculoDireta).toString() + ",00";
   vendaShopee.innerHTML = Math.round(calculoShopee).toString() + ",00";
