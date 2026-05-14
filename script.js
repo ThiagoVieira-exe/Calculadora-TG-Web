@@ -16,17 +16,11 @@ function calcular() {
   let extra = 0;
   const TAXA_CONTABILIDADE = 2.5
 
-  if (
-    tipoTrabalho === "etiquetas" ||
-    tipoTrabalho === "cartao-personalizado" ||
-    tipoTrabalho === "adesivos"
-  ) {
+  if (tipoTrabalho === "corte-personalizado") {
     extra = custoFolha <= 0.6 ? 3 : 4;
   } else if (tipoTrabalho === "folhetos") {
     extra = 1;
-  } else if (tipoTrabalho === "cartao-offset180g") {
-    extra = custoFolha < 0.4 ? 2 : 3;
-  } else if (tipoTrabalho === "cartao-visita") {
+  } else if (tipoTrabalho === "corte-54x90mm") {
     extra = custoFolha <= 0.6 ? 2 : 3;
   }
 
