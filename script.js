@@ -14,7 +14,7 @@ function calcular() {
     Number(document.getElementById("custo-adicional").value) || 0;
 
   let extra = 0;
-  // const TAXA_CONTABILIDADE = 2.5
+  const TAXA_CONTABILIDADE = 2
 
   if (tipoTrabalho === "corte-personalizado") {
     extra = custoFolha <= 0.6 ? 3 : 4;
@@ -32,8 +32,8 @@ function calcular() {
     base += quantFolha / 5;
   }
 
-  const calculoDireta = (base + 2 + custoAdicional) * 1.20; // Loja: +2,00 + 20%
-  const calculoShopee = (base + 4 + custoAdicional) * 1.30; // Shopee: +4,00 + 30%
+  const calculoDireta = (base + 2 + custoAdicional + TAXA_CONTABILIDADE) * 1.20; // Loja: +2,00 + 20%
+  const calculoShopee = (base + 4 + custoAdicional + TAXA_CONTABILIDADE) * 1.30; // Shopee: +4,00 + 30%
 
   vendaDireta.innerHTML = Math.round(calculoDireta).toString() + ",00";
   vendaShopee.innerHTML = Math.round(calculoShopee).toString() + ",00";
