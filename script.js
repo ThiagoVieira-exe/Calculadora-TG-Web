@@ -14,7 +14,7 @@ function calcular() {
     Number(document.getElementById("custo-adicional").value) || 0;
 
   let extra = 0;
-  const TAXA_CONTABILIDADE = 2
+  const TAXA_CONTABILIDADE = 2.5
 
   if (tipoTrabalho === "corte-personalizado") {
     extra = custoFolha <= 0.6 ? 3 : 4;
