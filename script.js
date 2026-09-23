@@ -53,7 +53,7 @@ function calcular() {
     if (preco <= 79.99) {
       return {
         percentual: 0.2,
-        taxaFixa: 4,
+        taxaFixa: 4.5,
       };
     }
 
