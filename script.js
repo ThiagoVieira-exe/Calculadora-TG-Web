@@ -28,8 +28,6 @@ function calcular() {
     extra = custoFolha <= 0.6 ? 3 : 4;
   } else if (tipoTrabalho === "folhetos") {
     extra = 1;
-  } else if (tipoTrabalho === "corte-54x90mm") {
-    extra = custoFolha <= 0.6 ? 2 : 3;
   }
 
   // Custo de produção
@@ -37,7 +35,6 @@ function calcular() {
 
   // Multiplicador original da gráfica
   const base = custoBase * multiplicador;
-
 
   // ======================
   // VENDA DIRETA
@@ -85,7 +82,6 @@ function calcular() {
   }
 
   const custoTotal = base + custoAdicional + TAXA_CONTABILIDADE;
-  
 
   let precoShopee = custoTotal;
 
