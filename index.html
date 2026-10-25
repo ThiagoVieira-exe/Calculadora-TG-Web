@@ -8,38 +8,40 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500"
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
       rel="stylesheet"
     />
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
-    <title>Calculadora TG</title>
+    <title>Calculadora TG - Orçamentos</title>
   </head>
   <body>
     <header>
       <h1>Calculadora TG</h1>
     </header>
+
     <main>
       <div id="container-principal">
-        <div id="trabalhos">
+        <div id="trabalhos" class="campo-form">
           <label for="select-options">Tipo de Trabalho:</label>
           <select id="select-options">
-            <option value="corte-personalizado" selected>Corte Personalizado</option>
+            <option value="corte-refile" selected>Corte Refile</option>
             <option value="folhetos">Folhetos</option>
           </select>
         </div>
 
-        <div id="select-box-multiplicador">
+        <div id="select-box-multiplicador" class="campo-form">
           <label for="select-options-multiplicador">Multiplicador:</label>
           <select id="select-options-multiplicador">
             <option value="2.75">x2.75 (Com Desconto)</option>
-            <option value="3" selected>x3 (Padrao)</option>
+            <option value="3" selected>x3 (Padrão)</option>
             <option value="4">x4 (Complexidade)</option>
           </select>
         </div>
 
-        <div id="select-box-precos">
+        <div id="select-box-precos" class="campo-form">
           <label for="select-precos">Tipo de Impressão:</label>
           <select id="select-precos">
+            <!-- Populado dinamicamente via script.js (CONFIG) -->
             <option value="0.6">Glossy - Apenas Frente</option>
             <option value="0.9">Glossy - Frente e Verso</option>
             <option value="0.70">Etiquetas - Frente e Verso</option>
@@ -51,9 +53,10 @@
           </select>
         </div>
 
-        <div id="laminacao">
+        <div id="laminacao" class="campo-form">
           <label for="select-laminacao">Laminação:</label>
           <select id="select-laminacao">
+            <!-- Populado dinamicamente via script.js (CONFIG) -->
             <option value="0" selected>Sem Laminação</option>
             <option value="0.15">Brilho - Apenas Frente</option>
             <option value="0.30">Brilho - Frente e Verso</option>
@@ -69,35 +72,47 @@
               <input
                 type="number"
                 id="quant-folhas"
-                placeholder="Exemplo: 10"
+                placeholder="Ex: 10"
+                min="1"
+                step="1"
               />
             </div>
             <div class="div-input">
-              <label for="custo-adicional">Valor Adicional:</label>
+              <label for="custo-adicional">Valor Adicional (R$):</label>
               <input
                 type="number"
                 id="custo-adicional"
-                placeholder="Exemplo: 5"
+                placeholder="Ex: 5"
+                min="0"
+                step="any"
               />
             </div>
           </div>
-          <button onclick="calcular()">Calcular</button>
         </div>
 
         <div id="container-precos">
-          <div class="output-preco">
-            <h2>Venda Direta: R$<span id="venda-direta">0,00</span></h2>
+          <div class="output-preco card-direta">
+            <span class="preco-titulo">Valor Site</span>
+            <div class="preco-valor">R$ <span id="venda-direta">0,00</span></div>
           </div>
-          <div class="output-preco">
-            <h2>Venda Shopee: R$<span id="venda-shopee">0,00</span></h2>
+          <div class="output-preco card-shopee">
+            <span class="preco-titulo">Shopee</span>
+            <div class="preco-valor">R$ <span id="venda-shopee">0,00</span></div>
           </div>
         </div>
+
+        <div class="botoes-acoes">
+          <button id="btn-limpar" type="button" onclick="limparCampos()">Limpar</button>
+          <button id="btn-copiar" type="button" onclick="copiarOrcamento()">Copiar Orçamento</button>
+        </div>
+
+        <p id="mensagem-validacao" class="mensagem-ajuda"></p>
       </div>
     </main>
+
     <footer>
       <h3>
-        Copyright &copy; TG Gráfica Personalizada - 2025 | Todos os direitos são
-        reservados.
+        Copyright &copy; TG Gráfica Personalizada - <span id="ano-atual">2026</span> | Todos os direitos são reservados.
       </h3>
     </footer>
 
