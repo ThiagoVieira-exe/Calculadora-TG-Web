@@ -274,7 +274,7 @@ footer h3 {
 }
 
 /* Responsividade para telas menores */
-@media (max-width: 480px) {
+@media (max-width: 408px) {
   #container-principal {
     padding: 18px 14px;
     border-radius: 12px;
