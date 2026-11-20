@@ -15,8 +15,8 @@ const CONFIG = {
     { id: "offset-180g-frente", nome: "Offset 180g - Apenas Frente", preco: 0.3 },
     { id: "offset-180g-frente-verso", nome: "Offset 180g - Frente e Verso", preco: 0.45 },
     { id: "folhetos-a6-120g-frente", nome: "Folhetos A6 120g - Apenas Frente", preco: 0.07 },
-    { id: "offset-300g-frente", nome: "Offset 300g - Apenas Frente", preco: 0.5 },
-    { id: "offset-300g-frente-verso", nome: "Offset 300g - Frente e Verso", preco: 0.7 },
+    { id: "offset-240g-frente", nome: "Offset 240g - Apenas Frente", preco: 0.4 },
+    { id: "offset-240g-frente-verso", nome: "Offset 240g - Frente e Verso", preco: 0.6 },
   ],
 
   // Tipos de laminação (preço por folha)
